@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, ScrollView, StatusBar, View, TouchableOpacity, Image, Dimensions } from 'react-native';
 import { SafeAreaView, SafeAreaProvider } from 'react-native-safe-area-context';
-import { topupIcon } from '../../utils/ImageList';
+import { billsIcon, charityIcon, gamesIcon, moreIcon, payIcon, shoppingIcon, topupIcon, transferIcon } from '../../utils/ImageList';
 import Carousel from 'react-native-reanimated-carousel';
 import 'react-native-gesture-handler';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
@@ -40,7 +40,7 @@ const App = () => {
                                 </View>
                                 <View style={{ display: "flex", flexDirection: "column", alignItems: "center" }} >
                                     <TouchableOpacity>
-                                        <Image source={topupIcon} style={{ height: 55, width: 55 }} />
+                                        <Image source={payIcon} style={{ height: 55, width: 55 }} />
                                     </TouchableOpacity>
                                     <Text >
                                         Pay
@@ -48,7 +48,7 @@ const App = () => {
                                 </View>
                                 <View style={{ display: "flex", flexDirection: "column", alignItems: "center" }} >
                                     <TouchableOpacity>
-                                        <Image source={topupIcon} style={{ height: 55, width: 55 }} />
+                                        <Image source={transferIcon} style={{ height: 55, width: 55 }} />
                                     </TouchableOpacity>
                                     <Text>
                                         Transfer
@@ -56,7 +56,7 @@ const App = () => {
                                 </View>
                                 <View style={{ display: "flex", flexDirection: "column", alignItems: "center" }} >
                                     <TouchableOpacity>
-                                        <Image source={topupIcon} style={{ height: 55, width: 55 }} />
+                                        <Image source={shoppingIcon} style={{ height: 55, width: 55 }} />
                                     </TouchableOpacity>
                                     <Text>
                                         Eshopping
@@ -66,7 +66,7 @@ const App = () => {
                             <View style={{ height: 90, width: "100%", display: "flex", flexDirection: "row", justifyContent: "space-between" }} >
                                 <View style={{ display: "flex", flexDirection: "column", alignItems: "center" }} >
                                     <TouchableOpacity>
-                                        <Image source={topupIcon} style={{ height: 55, width: 55 }} />
+                                        <Image source={billsIcon} style={{ height: 55, width: 55 }} />
                                     </TouchableOpacity>
                                     <Text>
                                         Bills
@@ -74,7 +74,7 @@ const App = () => {
                                 </View>
                                 <View style={{ display: "flex", flexDirection: "column", alignItems: "center" }} >
                                     <TouchableOpacity>
-                                        <Image source={topupIcon} style={{ height: 55, width: 55 }} />
+                                        <Image source={gamesIcon} style={{ height: 55, width: 55 }} />
                                     </TouchableOpacity>
                                     <Text >
                                         Games
@@ -82,7 +82,7 @@ const App = () => {
                                 </View>
                                 <View style={{ display: "flex", flexDirection: "column", alignItems: "center" }} >
                                     <TouchableOpacity>
-                                        <Image source={topupIcon} style={{ height: 55, width: 55 }} />
+                                        <Image source={charityIcon} style={{ height: 55, width: 55 }} />
                                     </TouchableOpacity>
                                     <Text>
                                         Charity
@@ -90,7 +90,7 @@ const App = () => {
                                 </View>
                                 <View style={{ display: "flex", flexDirection: "column", alignItems: "center" }} >
                                     <TouchableOpacity>
-                                        <Image source={topupIcon} style={{ height: 55, width: 55 }} />
+                                        <Image source={moreIcon} style={{ height: 55, width: 55 }} />
                                     </TouchableOpacity>
                                     <Text>
                                         More
@@ -104,15 +104,14 @@ const App = () => {
                         <GestureHandlerRootView style={{ flex: 1 }}>
                             <View style={styles?.carauselContainer}>
                                 <Carousel
-                                    data={sliderData} // Data for each slide
-                                    renderItem={renderItem} // Render function for each slide
-                                    width={width} // Set the width of the carousel
-                                    height={200} // Set the height of each carousel item
-                                    // Optional props for carousel behavior
-                                    loop={true} // Enable looping through the slides
-                                    autoPlay={true} // Enable auto play of the slides
-                                    autoPlayInterval={3000} // Set auto play interval (3 seconds)
-                                    onSnapToItem={(index) => console.log('Current index:', index)} // Callback when a slide is selected
+                                    data={sliderData} 
+                                    renderItem={renderItem}
+                                    width={width} 
+                                    height={200}
+                                    loop={true} 
+                                    autoPlay={true} 
+                                    autoPlayInterval={3000} 
+                                    onSnapToItem={(index) => console.log('Current index:', index)}
                                 />
                             </View>
                         </GestureHandlerRootView>

@@ -4,7 +4,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { StatusBar } from 'react-native';
 
-import Home from './components/Home';
+import MainHome from './components/MainHome';
 
 
 const Stack = createStackNavigator();
@@ -17,7 +17,7 @@ const StackNavigatorContainer = () => (
     screenOptions={{
       headerShown: false
     }}>
-    <Stack.Screen name="Home" component={Home} />
+    <Stack.Screen name="Home" component={MainHome} />
     {/* Add other Stack.Screen components as needed */}
   </Stack.Navigator>
 );
