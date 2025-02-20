@@ -5,6 +5,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { StatusBar } from 'react-native';
 
 import MainHome from './components/MainHome';
+import Register from './components/Pages/LoginScreen/Register';
 
 
 const Stack = createStackNavigator();
@@ -17,6 +18,7 @@ const StackNavigatorContainer = () => (
     screenOptions={{
       headerShown: false
     }}>
+    <Stack.Screen name="Register" component={Register} />
     <Stack.Screen name="Home" component={MainHome} />
     {/* Add other Stack.Screen components as needed */}
   </Stack.Navigator>
